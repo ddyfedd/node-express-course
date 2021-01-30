@@ -29,10 +29,10 @@ app.get('/users/:id', (req, res) => {
 
 app.post('/login', (req, res) => {
     const username = req.body.username;
-    const password = req.params.password;
+    const password = req.body.password;
 
     const mockUsername = "billyTheKid";
-    const mockPassword = "supsupsup";
+    const mockPassword = "superSecret";
 
     if (username===mockUsername && password===mockPassword) {
         res.json({
@@ -47,6 +47,8 @@ app.post('/login', (req, res) => {
         })
     }
 })
+
+
 
 
 app.listen(8000, () => {
